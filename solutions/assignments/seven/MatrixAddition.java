@@ -70,8 +70,6 @@ public class MatrixAddition {
     public static void main(String[] args) {
         // Variables
         String another = "y";
-        int MAX_INTS_FOR_MATRIX = 9;
-        int numOfInts = 0;
         int rows = 3;
         int cols = 3;
         int[][] matrixA = new int[rows][cols];
@@ -84,25 +82,19 @@ public class MatrixAddition {
             // Get two 3x3 matrices from user input
             // Matrix 1
             System.out.print("Please enter 9 values for first 3x3 matrix, first 3 for row 1, second 3 for row 2, and third 3 for row 2: ");
-            while (numOfInts < MAX_INTS_FOR_MATRIX) {
-                for (int row = 0; row < rows; row++) {
-                    for (int col = 0; col < cols; col++) {
-                        matrixA[row][col] = s.nextInt();
-                        numOfInts++;
-                    }
+            for (int row = 0; row < rows; row++) {
+                for (int col = 0; col < cols; col++) {
+                    matrixA[row][col] = s.nextInt();
                 }
             }
 
-            numOfInts = 0;
+
             // Get two 3x3 matrices from user input
             // Matrix 2
             System.out.print("Please enter 9 values for second 3x3 matrix, first 3 for row 1, second 3 for row 2, and third 3 for row 2: ");
-            while (numOfInts < MAX_INTS_FOR_MATRIX) {
-                for (int row = 0; row < rows; row++) {
-                    for (int col = 0; col < cols; col++) {
-                        matrixB[row][col] = s.nextInt();
-                        numOfInts++;
-                    }
+            for (int row = 0; row < rows; row++) {
+                for (int col = 0; col < cols; col++) {
+                    matrixB[row][col] = s.nextInt();
                 }
             }
 
@@ -118,7 +110,7 @@ public class MatrixAddition {
 
             System.out.println();
             System.out.print("Add two additional 3x3 matrices (y/n)? ");
-            another = s.nextLine();
+            another = s.next();
         }
     }
 }
